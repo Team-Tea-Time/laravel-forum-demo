@@ -61,6 +61,12 @@
 	</nav>
 
 	<div id="main" class="container">
+		@if(!Auth::user())
+		<div class="alert alert-info">
+			Log in with <strong>DemoUser</strong> / <strong>demo321</strong>
+		</div>
+		@endif
+
 		@include('forum::partials.alerts')
 
 		@yield('content')
