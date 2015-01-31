@@ -45,6 +45,11 @@ return array(
   */
   'lock_threads' => function($thread, $user)
   {
+    if ($user == NULL)
+    {
+      return FALSE;
+    }
+
     return TRUE;
   },
 
@@ -58,6 +63,11 @@ return array(
   */
   'pin_threads' => function($thread, $user)
   {
+    if ($user == NULL)
+    {
+      return FALSE;
+    }
+
     return TRUE;
   },
 
@@ -71,6 +81,11 @@ return array(
   */
   'delete_threads' => function($thread, $user)
   {
+    if ($user == NULL)
+    {
+      return FALSE;
+    }
+
     return TRUE;
   },
 
