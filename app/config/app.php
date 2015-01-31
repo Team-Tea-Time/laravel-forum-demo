@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => 'http://laravel-forum-demo.ricko.me',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -121,6 +121,9 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+    'Zizaco\Confide\ServiceProvider',
+		'Riari\Forum\ForumServiceProvider',
+		'Barryvdh\Debugbar\ServiceProvider',
 
 	),
 
@@ -188,7 +191,8 @@ return array(
 		'URL'               => 'Illuminate\Support\Facades\URL',
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
-
+    'Confide'    				=> 'Zizaco\Confide\Facade',
+		'Debugbar' 					=> 'Barryvdh\Debugbar\Facade',
 	),
 
 );
