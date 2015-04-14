@@ -1,3 +1,7 @@
+## Laravel forum package
+
+See [Riari/laravel-forum](https://github.com/Riari/laravel-forum) for the package source and docs.
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
