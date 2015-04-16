@@ -80,6 +80,9 @@ class UsersController extends Controller
         $input = Input::all();
 
         if ($repo->login($input)) {
+            $user = Confide::user();
+            Session::flash('notice', "Logged in as {$user->username}!");
+
             return Redirect::intended('/');
         } else {
             if ($repo->isThrottled($input)) {
