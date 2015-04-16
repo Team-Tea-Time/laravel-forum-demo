@@ -1,15 +1,34 @@
-
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
 
 #main {
-  padding-top: 30px;
+    padding-top: 30px;
 }
 
 .logged-in {
-  float: right;
-  padding: 10px;
-  color: #fff;
+    float: right;
+    padding: 10px;
+    color: #fff;
+}
+
+.thread.new a {
+    font-weight: bold;
+}
+
+.thread.updated a {
+    font-style: italic;
+}
+
+.thread-tools .dropdown-menu {
+    padding: 5px 15px;
+}
+
+.thread-tools .dropdown-menu li {
+    margin: 10px 0;
+}
+
+form.inline {
+    display: inline-block;
 }
