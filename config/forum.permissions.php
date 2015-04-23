@@ -47,7 +47,7 @@ return [
     {
         // For the demo, we allow the moderator (user #2) to do this.
         // In a real scenario we'd use an access control package of some sort.
-        return (!is_null($user) && $user->id == 2);
+        return (!is_null($user) && $user->id == 5);
     },
 
     /*
@@ -62,7 +62,7 @@ return [
     {
         // For the demo, we allow the moderator (user #2) to do this.
         // In a real scenario we'd use an access control package of some sort.
-        return (!is_null($user) && $user->id == 2);
+        return (!is_null($user) && $user->id == 5);
     },
 
     /*
@@ -77,7 +77,7 @@ return [
     {
         // For the demo, we allow the moderator (user #2) to do this.
         // In a real scenario we'd use an access control package of some sort.
-        return (!is_null($user) && $user->id == 2);
+        return (!is_null($user) && $user->id == 5);
     },
 
     /*
@@ -113,7 +113,7 @@ return [
         // For the demo, we allow the moderator (user #2) to do this in addition
         // to post authors.
         // In a real scenario we'd use an access control package of some sort.
-        if ($user == null || $user->id != 2 && ($user->id != $post->author_id))
+        if ($user == null || $user->id != 5 && ($user->id != $post->author_id))
         {
             return false;
         }
@@ -133,7 +133,7 @@ return [
     {
         // For the demo, we allow the moderator (user #2) to do this.
         // In a real scenario we'd use an access control package of some sort.
-        return (!is_null($user) && $user->id == 2);
+        return (!is_null($user) && $user->id == 5);
     }
 
 ];
