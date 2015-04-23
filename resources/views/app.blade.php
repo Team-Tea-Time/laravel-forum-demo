@@ -66,6 +66,14 @@
 		@endif
 
 		@yield('content')
+
+		<hr>
+
+		<div class="text-center">
+			Built for <a href="http://laravel.com/">Laravel 5</a> by <a href="http://teamteatime.net/">TeamTeaTime</a> &nbsp;
+			<a href="https://github.com/Team-Tea-Time/laravel-forum-demo">View source on GitHub</a> &nbsp;
+			<a href="https://github.com/Riari/laravel-forum">View package source on GitHub</a>
+		</div>
 	</div>
 
 	<!-- Scripts -->
