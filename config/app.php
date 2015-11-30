@@ -144,8 +144,8 @@ return [
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
-		'Illuminate\Html\HtmlServiceProvider',
 		'Riari\Forum\ForumServiceProvider',
+		'Riari\Forum\Frontend\ForumFrontendServiceProvider',
 
 	],
 
@@ -175,6 +175,7 @@ return [
 		'Eloquent'  => 'Illuminate\Database\Eloquent\Model',
 		'Event'     => 'Illuminate\Support\Facades\Event',
 		'File'      => 'Illuminate\Support\Facades\File',
+		'Gate'		=> 'Illuminate\Support\Facades\Gate',
 		'Hash'      => 'Illuminate\Support\Facades\Hash',
 		'Input'     => 'Illuminate\Support\Facades\Input',
 		'Inspiring' => 'Illuminate\Foundation\Inspiring',

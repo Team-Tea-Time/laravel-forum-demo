@@ -2,60 +2,45 @@
 
 return [
 
-	/*
-	|--------------------------------------------------------------------------
-	| Application user model
-	|--------------------------------------------------------------------------
-	|
-	| The user model from the main application
-	|
-	*/
-	'user_model' => 'App\User',
+    /*
+    |--------------------------------------------------------------------------
+    | Policies
+    |--------------------------------------------------------------------------
+    |
+    | Here we specify the policy classes to use. Change these if you want to
+    | extend the provided classes and use your own instead.
+    |
+    */
 
-	/*
-	|--------------------------------------------------------------------------
-	| Closure: determine the current user model
-	|--------------------------------------------------------------------------
-	|
-	| Must return the current logged in user model to use
-	| Non object, or null response is considered as not logged in
-	|
-	*/
-	'current_user' => function() {
-		//Here you can use confide facade,
-		//or just the default facade, or whatever else
+    'policies' => [
+        'forum' => App\Policies\ForumPolicy::class,
+        'model' => [
+            Riari\Forum\Models\Category::class  => App\Policies\CategoryPolicy::class,
+            Riari\Forum\Models\Thread::class    => App\Policies\ThreadPolicy::class,
+            Riari\Forum\Models\Post::class      => App\Policies\PostPolicy::class
+        ]
+    ],
 
-		return Auth::user();
-	},
+    /*
+    |--------------------------------------------------------------------------
+    | Application user model
+    |--------------------------------------------------------------------------
+    |
+    | Your application's user model.
+    |
+    */
 
-	/*
-	|--------------------------------------------------------------------------
-	| Closure: process alert messages
-	|--------------------------------------------------------------------------
-	|
-	| Change this if your app has its own user alert/notification system.
-	| NOTE: remember to override the forum views to remove the default alerts
-	| if you no longer use them.
-	|
-	*/
-	'process_alert' => function($type, $message) {
-		$alerts = array();
-		if (Session::has('alerts'))
-		{
-			$alerts = Session::get('alerts');
-		}
+    'user_model' => App\User::class,
 
-		Session::flash('alerts', array_merge($alerts, [['type' => $type, 'message' => $message]]));
-	},
+    /*
+    |--------------------------------------------------------------------------
+    | Application user name
+    |--------------------------------------------------------------------------
+    |
+    | The attribute to use for the username.
+    |
+    */
 
-	/*
-	|--------------------------------------------------------------------------
-	| Application controller
-	|--------------------------------------------------------------------------
-	|
-	| This class must extend \Riari\Forum\Controllers\BaseController
-	|
-	*/
-	'controller' => '\App\Http\Controllers\ForumController'
+    'user_name' => 'name',
 
 ];

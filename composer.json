@@ -5,9 +5,9 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "5.0.*",
-		"riari/laravel-forum": "~2.0",
-		"illuminate/html": "5.0.*"
+		"laravel/framework": "~5.0",
+		"riari/laravel-forum": "~3.0",
+		"riari/laravel-forum-frontend": "~1.0"
 	},
 	"autoload": {
 		"classmap": [

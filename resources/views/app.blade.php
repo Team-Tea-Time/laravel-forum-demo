@@ -17,6 +17,15 @@
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+    <style>
+    textarea {
+        min-height: 200px;
+    }
+
+    .deleted {
+        opacity: 0.65;
+    }
+    </style>
 </head>
 <body>
 	<nav class="navbar navbar-default">
@@ -33,18 +42,18 @@
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="/">Home</a></li>
-					<li><a href="/new">New &amp; updated threads</a></li>
+					<li><a href="{{ url('/') }}">Home</a></li>
+					<li><a href="{{ url('new') }}">New &amp; updated threads</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
 					@if (Auth::guest())
-						<li><a href="{{ url('/auth/login') }}">Login</a></li>
+						<li><a href="{{ url('auth/login') }}">Login</a></li>
 					@else
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+								<li><a href="{{ url('auth/logout') }}">Logout</a></li>
 							</ul>
 						</li>
 					@endif
@@ -54,25 +63,20 @@
 	</nav>
 
 	<div class="container">
-		@section('top')
+		@section ('top')
 		@show
 	</div>
 
 	<div id="main" class="container">
-		@if (Auth::guest())
-		<div class="alert alert-info">
-			Log in with <strong>user@forum.net</strong> or <strong>moderator@forum.net</strong> and <strong>demo321</strong>
-		</div>
-		@endif
-
-		@yield('content')
+		@yield ('content')
 
 		<hr>
 
 		<div class="text-center">
 			Built for <a href="http://laravel.com/">Laravel 5</a> by <a href="http://teamteatime.net/">TeamTeaTime</a> &nbsp;
-			<a href="https://github.com/Team-Tea-Time/laravel-forum-demo">View source on GitHub</a> &nbsp;
-			<a href="https://github.com/Riari/laravel-forum">View package source on GitHub</a>
+			<a href="https://github.com/Team-Tea-Time/laravel-forum-demo">View demo source on GitHub</a> &nbsp;
+			<a href="https://github.com/Riari/laravel-forum">View package source on GitHub</a> &nbsp;
+			<a href="http://teamteatime.net/docs/laravel-forum/introduction.md">View docs on teamteatime.net</a>
 		</div>
 	</div>
 
@@ -89,9 +93,72 @@
 	        }
 	    });
 	});
-	</script>
 
-	@section('bottom')
+    var toggle = $('input[type=checkbox][data-toggle-all]');
+    var checkboxes = $('table tbody input[type=checkbox]');
+    var actions = $('[data-actions]');
+    var forms = $('[data-actions-form]');
+    var confirmString = "{{ trans('forum::general.generic_confirm') }}";
+
+    function setToggleStates() {
+        checkboxes.prop('checked', toggle.is(':checked')).change();
+    }
+
+    function setSelectionStates() {
+        checkboxes.each(function() {
+            var tr = $(this).parents('tr');
+
+            $(this).is(':checked') ? tr.addClass('active') : tr.removeClass('active');
+
+            checkboxes.filter(':checked').length ? $('[data-bulk-actions]').removeClass('hidden') : $('[data-bulk-actions]').addClass('hidden');
+        });
+    }
+
+    function setActionStates() {
+        forms.each(function () {
+            var form = $(this);
+            var method = form.find('input[name=_method]');
+            var selected = form.find('select[name=action] option:selected');
+            var depends = form.find('[data-depends]');
+
+            selected.each(function () {
+                if ($(this).attr('data-method')) {
+                    method.val($(this).data('method'));
+                } else {
+                    method.val('patch');
+                }
+            });
+
+            depends.each(function () {
+                (selected.val() == $(this).data('depends')) ? $(this).removeClass('hidden') : $(this).addClass('hidden');
+            });
+        });
+    }
+
+    setToggleStates();
+    setSelectionStates();
+    setActionStates();
+
+    toggle.click(setToggleStates);
+    checkboxes.change(setSelectionStates);
+    actions.change(setActionStates);
+
+    forms.submit(function () {
+        var action = $(this).find('[data-actions]').find(':selected');
+
+        if (action.is('[data-confirm]')) {
+            return confirm(confirmString);
+        }
+
+        return true;
+    });
+
+    $('form[data-confirm]').submit(function () {
+        return confirm(confirmString);
+    });
+    </script>
+
+	@section ('bottom')
 	@show
 </body>
 </html>

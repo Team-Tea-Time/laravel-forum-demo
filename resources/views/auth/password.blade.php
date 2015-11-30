@@ -1,5 +1,5 @@
 @extends('app')
 
-@section('content')
+@section ('content')
 <div class="alert alert-danger">Password reset is disabled</div>
 @endsection

@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('content')
+@section ('content')
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
@@ -22,16 +22,20 @@
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 						<div class="form-group">
-							<label class="col-md-4 control-label">E-Mail Address</label>
+							<label class="col-md-4 control-label">User</label>
 							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="user@forum.net">
+								<select name="email" class="form-control">
+									<option value="user@forum.net">User</option>
+									<option value="moderator@forum.net">Moderator</option>
+									<option value="admin@forum.net">Admin</option>
+								</select>
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Password</label>
 							<div class="col-md-6">
-								<input type="password" class="form-control" name="password" value="demo321">
+								<input type="text" class="form-control" name="password" value="demo321">
 							</div>
 						</div>
 

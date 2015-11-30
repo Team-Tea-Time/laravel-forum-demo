@@ -4,58 +4,79 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Thread settings
+    | Old thread threshold
+    |--------------------------------------------------------------------------
+    |
+    | The minimum age of a thread before it should be considered old. This
+    | determines whether or not a thread can be considered new or unread for
+    | any user. Increasing this value to cover a longer period will increase
+    | the ultimate size of your forum_threads_read table. Must be a valid
+    | strtotime() string, or set to false to completely disable age-sensitive
+    | thread features.
+    |
+    */
+
+    'old_thread_threshold' => '7 days',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Pagination
     |--------------------------------------------------------------------------
     */
-    'thread' => [
-        // Specify the minimum age of a thread before it should be considered
-        // old. This determines whether or not a thread can be considered new or
-        // unread for any logged in user. Setting a longer cut-off duration here
-        // will increase the size of your forum_threads_read table.
-        // Must be a valid strtotime() string, or set to false to completely
-        // disable age-sensitive thread features.
-        'cutoff_age' => '-1 month'
+
+    'pagination' => [
+        'categories'    => 20, // Categories per page (API only)
+        'threads'       => 20, // Threads per page
+        'posts'         => 15  // Posts per page
     ],
 
     /*
     |--------------------------------------------------------------------------
-    | Pagination settings
-    |--------------------------------------------------------------------------
-    */
-    'threads_per_category' => 20,
-    'posts_per_thread' => 15,
-
-    /*
-    |--------------------------------------------------------------------------
-    | Cache settings
+    | Cache lifetimes
     |--------------------------------------------------------------------------
     |
-    | Duration to cache data such as thread and post counts (in minutes).
+    | Here we specify cache lifetimes (in minutes) for various model data. Any
+    | falsey values set here will cause the cache to use the default lifetime
+    | for corresponding models/attributes.
     |
     */
-    'cache_lifetime' => 5,
 
-    /*
-    |--------------------------------------------------------------------------
-    | Validation settings
-    |--------------------------------------------------------------------------
-    */
-    'validation_rules' => array(
-        'thread' => [
-            'title' => 'required'
-        ],
-        'post' => [
-            'content' => 'required|min:5'
+    'cache_lifetimes' => [
+        'default' => 5,
+        'Category' => [
+            'threadCount'   => 5,
+            'postCount'     => 5,
+            'deepestChild'  => 720,
+            'depth'         => 720
         ]
-    ),
+    ],
 
     /*
     |--------------------------------------------------------------------------
-    | Misc settings
+    | Soft deletes
     |--------------------------------------------------------------------------
+    |
+    | Disable this if you want threads and posts to be permanently removed from
+    | your database when they're deleted. Note that by default, the option
+    | to force delete threads and posts exists regardless of this setting.
+    |
     */
-    // Soft Delete: disable this if you want threads and posts to be permanently
-    // removed from your database when they're deleted by a user.
-    'soft_delete' => true
+
+    'soft_deletes' => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Display trashed (soft-deleted) posts
+    |--------------------------------------------------------------------------
+    |
+    | Enable this if you want to display messages in place of soft-deleted
+    | posts instead of hiding them altogether.
+    |
+    | Note: Enabling will override the viewTrashedPosts ability (and vice-versa
+    | for authenticated users).
+    |
+    */
+
+    'display_trashed_posts' => true
 
 ];
