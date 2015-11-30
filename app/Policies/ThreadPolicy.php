@@ -29,7 +29,7 @@ class ThreadPolicy extends Base
      */
     public function rename($user, Thread $thread)
     {
-        return $user->id === $thread->author_id || in_array($user->name, ['Moderator', 'Admin']);;
+        return $user->id === $thread->author_id || in_array($user->name, ['Moderator', 'Admin']);
     }
 
     /**
@@ -41,6 +41,6 @@ class ThreadPolicy extends Base
      */
     public function reply($user, Thread $thread)
     {
-        return !$thread->locked || in_array($user->name, ['Moderator', 'Admin']);;
+        return !$thread->locked || in_array($user->name, ['Moderator', 'Admin']);
     }
 }
