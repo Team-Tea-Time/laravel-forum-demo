@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Gate;
 use Riari\Forum\Models\Post;
 use Riari\Forum\Policies\PostPolicy as Base;
 
-class PostPolicy
+class PostPolicy extends Base
 {
     /**
      * Permission: Edit post.
