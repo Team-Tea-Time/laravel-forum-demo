@@ -22,7 +22,7 @@
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 						<div class="form-group">
-							<label class="col-md-4 control-label">User</label>
+							<label class="col-md-4 control-label">Select a user</label>
 							<div class="col-md-6">
 								<select name="email" class="form-control">
 									<option value="user@forum.net">User</option>
