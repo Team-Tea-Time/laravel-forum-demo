@@ -710,16 +710,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.2.33",
+            "version": "v5.2.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "4120808d2e841ba5a94c5e0443e9696ae4fa9bfe"
+                "reference": "6a26f3bb6a6e00c53654a661221643ad1b98e146"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/4120808d2e841ba5a94c5e0443e9696ae4fa9bfe",
-                "reference": "4120808d2e841ba5a94c5e0443e9696ae4fa9bfe",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/6a26f3bb6a6e00c53654a661221643ad1b98e146",
+                "reference": "6a26f3bb6a6e00c53654a661221643ad1b98e146",
                 "shasum": ""
             },
             "require": {
@@ -835,7 +835,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-05-25 18:35:42"
+            "time": "2016-05-26 21:59:46"
         },
         {
             "name": "league/flysystem",
@@ -1300,16 +1300,16 @@
         },
         {
             "name": "riari/laravel-forum",
-            "version": "3.1.1",
+            "version": "3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Riari/laravel-forum.git",
-                "reference": "49f476f770e90beac75b680b95537abe74013859"
+                "reference": "560923eae6fc21b2a467a5ca1a0a82df33aa0dea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Riari/laravel-forum/zipball/49f476f770e90beac75b680b95537abe74013859",
-                "reference": "49f476f770e90beac75b680b95537abe74013859",
+                "url": "https://api.github.com/repos/Riari/laravel-forum/zipball/560923eae6fc21b2a467a5ca1a0a82df33aa0dea",
+                "reference": "560923eae6fc21b2a467a5ca1a0a82df33aa0dea",
                 "shasum": ""
             },
             "require": {
@@ -1344,20 +1344,20 @@
                 "laravel-4",
                 "laravel-5"
             ],
-            "time": "2016-05-25 12:30:25"
+            "time": "2016-05-26 11:00:19"
         },
         {
             "name": "riari/laravel-forum-frontend",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Riari/laravel-forum-frontend.git",
-                "reference": "b068a51cd5f568c5766d93707a68241c94809229"
+                "reference": "2142f3c2d02f6553eb61a0b29c6e0e6517eb458a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Riari/laravel-forum-frontend/zipball/b068a51cd5f568c5766d93707a68241c94809229",
-                "reference": "b068a51cd5f568c5766d93707a68241c94809229",
+                "url": "https://api.github.com/repos/Riari/laravel-forum-frontend/zipball/2142f3c2d02f6553eb61a0b29c6e0e6517eb458a",
+                "reference": "2142f3c2d02f6553eb61a0b29c6e0e6517eb458a",
                 "shasum": ""
             },
             "require": {
@@ -1389,7 +1389,7 @@
                 "laravel-4",
                 "laravel-5"
             ],
-            "time": "2016-05-24 17:40:54"
+            "time": "2016-05-26 21:50:29"
         },
         {
             "name": "swiftmailer/swiftmailer",
