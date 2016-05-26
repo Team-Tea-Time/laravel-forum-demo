@@ -55,6 +55,6 @@ return [
     |
     */
 
-    'utility_class' => Riari\Forum\Frontend\Support\Forum::class,
+    'utility_class' => App\Support\Forum::class,
 
 ];
