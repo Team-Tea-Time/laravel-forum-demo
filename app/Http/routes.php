@@ -11,11 +11,6 @@
 |
 */
 
-Route::get('home', function() {
-	return Redirect::to('/');
+$router->group(['prefix' => 'auth'], function ($router) {
+    $router->auth();
 });
-
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
