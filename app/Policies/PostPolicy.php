@@ -17,6 +17,6 @@ class PostPolicy extends Base
      */
     public function edit($user, Post $post)
     {
-        return $user->id === $post->author_id || in_array($user->name, ['Moderator', 'Admin']);
+        return $user->id === $post->author_id || in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }
 }

@@ -14,7 +14,7 @@ class ForumPolicy extends Base
      */
     public function createCategories($user)
     {
-        return $user->name == 'Admin';
+        return $user->name == 'DemoAdmin';
     }
 
     /**
@@ -25,7 +25,7 @@ class ForumPolicy extends Base
      */
     public function moveCategories($user)
     {
-        return $user->name == 'Admin';
+        return $user->name == 'DemoAdmin';
     }
 
     /**
@@ -36,7 +36,7 @@ class ForumPolicy extends Base
      */
     public function renameCategories($user)
     {
-        return $user->name == 'Admin';
+        return $user->name == 'DemoAdmin';
     }
 
     /**
@@ -47,6 +47,6 @@ class ForumPolicy extends Base
      */
     public function viewTrashedThreads($user)
     {
-        return in_array($user->name, ['Moderator', 'Admin']);
+        return in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }
 }

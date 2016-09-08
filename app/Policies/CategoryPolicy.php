@@ -16,7 +16,7 @@ class CategoryPolicy extends Base
      */
     public function deleteThreads($user, Category $category)
     {
-        return in_array($user->name, ['Moderator', 'Admin']);
+        return in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }
 
     /**
@@ -28,7 +28,7 @@ class CategoryPolicy extends Base
      */
     public function enableThreads($user, Category $category)
     {
-        return in_array($user->name, ['Moderator', 'Admin']);
+        return in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }
 
     /**
@@ -40,7 +40,7 @@ class CategoryPolicy extends Base
      */
     public function moveThreadsFrom($user, Category $category)
     {
-        return in_array($user->name, ['Moderator', 'Admin']);
+        return in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }
 
     /**
@@ -52,7 +52,7 @@ class CategoryPolicy extends Base
      */
     public function moveThreadsTo($user, Category $category)
     {
-        return in_array($user->name, ['Moderator', 'Admin']);
+        return in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }
 
     /**
@@ -64,7 +64,7 @@ class CategoryPolicy extends Base
      */
     public function lockThreads($user, Category $category)
     {
-        return in_array($user->name, ['Moderator', 'Admin']);
+        return in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }
 
     /**
@@ -76,7 +76,7 @@ class CategoryPolicy extends Base
      */
     public function pinThreads($user, Category $category)
     {
-        return in_array($user->name, ['Moderator', 'Admin']);
+        return in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }
 
     /**
@@ -88,7 +88,7 @@ class CategoryPolicy extends Base
      */
     public function view($user, Category $category)
     {
-        return $user->name == 'Admin';
+        return $user->name == 'DemoAdmin';
     }
 
     /**
@@ -100,6 +100,6 @@ class CategoryPolicy extends Base
      */
     public function delete($user, Category $category)
     {
-        return $user->name == 'Admin';
+        return $user->name == 'DemoAdmin';
     }
 }
