@@ -73,7 +73,7 @@
 		<hr>
 
 		<div class="text-center">
-			Built for <a href="http://laravel.com/">Laravel 5</a> by <a href="http://teamteatime.net/">TeamTeaTime</a>. Running laravel-forum 3.1 and laravel-forum-frontend 1.1.
+			Built for <a href="http://laravel.com/">Laravel 5</a> by <a href="http://teamteatime.net/">TeamTeaTime</a>. Running laravel-forum 4.1 and laravel-forum-frontend 1.1.
 			<br>
 			<a href="https://github.com/Team-Tea-Time/laravel-forum-demo">View demo source on GitHub</a> &nbsp;
 			<a href="https://github.com/Riari/laravel-forum">View package source on GitHub</a> &nbsp;

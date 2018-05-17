@@ -13,4 +13,5 @@
 
 $router->group(['prefix' => 'auth'], function ($router) {
     $router->auth();
+    Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 });
