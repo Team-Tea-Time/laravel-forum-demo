@@ -1,0 +1,36 @@
+version: '3.7'
+
+services:
+
+  mysql:
+    image: mysql:5.7
+    container_name: laravel-forum-demo-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=demo
+      - MYSQL_USER=demo
+      - MYSQL_PASSWORD=secret
+    ports:
+      - "3306:3306"
+
+  nginx:
+    image: nginx:alpine
+    container_name: laravel-forum-demo-nginx
+    working_dir: /var/www/laravel-forum-demo
+    volumes:
+      - ./src:/var/www/laravel-forum-demo
+      - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "8000:80"
+
+  php-fpm:
+    build:
+      context: .
+      dockerfile: docker/php-fpm/Dockerfile
+    container_name: laravel-forum-demo-php-fpm
+    working_dir: /var/www/laravel-forum-demo
+    environment:
+      XDEBUG_CONFIG: remote_enable=1 remote_host=host.docker.internal remote_port=9001
+    volumes:
+      - ./src:/var/www/laravel-forum-demo
+      - /var/www/laravel-forum-demo/vendor
