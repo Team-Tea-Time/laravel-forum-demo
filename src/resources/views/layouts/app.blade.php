@@ -234,6 +234,11 @@
 
     <div class="mask"></div>
 
+	<div class="text-center text-muted">
+		Running Laravel Forum 5 on Laravel 8.<br>
+		See <a href="https://github.com/Team-Tea-Time/laravel-forum">source</a> and <a href="https://www.teamteatime.net/docs/laravel-forum/5/">docs</a>.
+	</div>
+
     <script>
     new Vue({
         el: '.v-navbar',
