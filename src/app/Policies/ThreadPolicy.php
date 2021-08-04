@@ -3,8 +3,8 @@
 namespace App\Policies;
 
 use Illuminate\Support\Facades\Gate;
-use Riari\Forum\Models\Thread;
-use Riari\Forum\Policies\ThreadPolicy as Base;
+use TeamTeaTime\Forum\Models\Thread;
+use TeamTeaTime\Forum\Policies\ThreadPolicy as Base;
 
 class ThreadPolicy extends Base
 {
@@ -15,7 +15,7 @@ class ThreadPolicy extends Base
      * @param  Thread  $thread
      * @return bool
      */
-    public function deletePosts($user, Thread $thread)
+    public function deletePosts($user, Thread $thread): bool
     {
         return in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }
@@ -27,7 +27,7 @@ class ThreadPolicy extends Base
      * @param  Thread  $thread
      * @return bool
      */
-    public function rename($user, Thread $thread)
+    public function rename($user, Thread $thread): bool
     {
         return $user->id === $thread->author_id || in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }
@@ -39,7 +39,7 @@ class ThreadPolicy extends Base
      * @param  Thread  $thread
      * @return bool
      */
-    public function reply($user, Thread $thread)
+    public function reply($user, Thread $thread): bool
     {
         return !$thread->locked || in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }

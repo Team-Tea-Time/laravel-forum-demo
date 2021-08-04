@@ -2,7 +2,7 @@
 
 namespace App\Policies;
 
-use Riari\Forum\Policies\ForumPolicy as Base;
+use TeamTeaTime\Forum\Policies\ForumPolicy as Base;
 
 class ForumPolicy extends Base
 {
@@ -12,7 +12,7 @@ class ForumPolicy extends Base
      * @param  object  $user
      * @return bool
      */
-    public function createCategories($user)
+    public function createCategories($user): bool
     {
         return $user->name == 'DemoAdmin';
     }
@@ -23,7 +23,7 @@ class ForumPolicy extends Base
      * @param  object  $user
      * @return bool
      */
-    public function moveCategories($user)
+    public function moveCategories($user): bool
     {
         return $user->name == 'DemoAdmin';
     }
@@ -34,7 +34,7 @@ class ForumPolicy extends Base
      * @param  object  $user
      * @return bool
      */
-    public function renameCategories($user)
+    public function renameCategories($user): bool
     {
         return $user->name == 'DemoAdmin';
     }
@@ -45,7 +45,7 @@ class ForumPolicy extends Base
      * @param  object  $user
      * @return bool
      */
-    public function viewTrashedThreads($user)
+    public function viewTrashedThreads($user): bool
     {
         return in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }

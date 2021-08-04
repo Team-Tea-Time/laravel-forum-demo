@@ -2,7 +2,7 @@
 
 namespace App\Support;
 
-class Forum extends \Riari\Forum\Frontend\Support\Forum
+class Forum extends \TeamTeaTime\Forum\Frontend\Support\Forum
 {
     /**
      * {@inheritdoc}

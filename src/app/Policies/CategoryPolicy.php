@@ -2,8 +2,8 @@
 
 namespace App\Policies;
 
-use Riari\Forum\Models\Category;
-use Riari\Forum\Policies\CategoryPolicy as Base;
+use TeamTeaTime\Forum\Models\Category;
+use TeamTeaTime\Forum\Policies\CategoryPolicy as Base;
 
 class CategoryPolicy extends Base
 {
@@ -14,7 +14,7 @@ class CategoryPolicy extends Base
      * @param  Category  $category
      * @return bool
      */
-    public function deleteThreads($user, Category $category)
+    public function deleteThreads($user, Category $category): bool
     {
         return in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }
@@ -26,7 +26,7 @@ class CategoryPolicy extends Base
      * @param  Category  $category
      * @return bool
      */
-    public function enableThreads($user, Category $category)
+    public function enableThreads($user, Category $category): bool
     {
         return in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }
@@ -38,7 +38,7 @@ class CategoryPolicy extends Base
      * @param  Category  $category
      * @return bool
      */
-    public function moveThreadsFrom($user, Category $category)
+    public function moveThreadsFrom($user, Category $category): bool
     {
         return in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }
@@ -50,7 +50,7 @@ class CategoryPolicy extends Base
      * @param  Category  $category
      * @return bool
      */
-    public function moveThreadsTo($user, Category $category)
+    public function moveThreadsTo($user, Category $category): bool
     {
         return in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }
@@ -62,7 +62,7 @@ class CategoryPolicy extends Base
      * @param  Category  $category
      * @return bool
      */
-    public function lockThreads($user, Category $category)
+    public function lockThreads($user, Category $category): bool
     {
         return in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }
@@ -74,7 +74,7 @@ class CategoryPolicy extends Base
      * @param  Category  $category
      * @return bool
      */
-    public function pinThreads($user, Category $category)
+    public function pinThreads($user, Category $category): bool
     {
         return in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }
@@ -86,7 +86,7 @@ class CategoryPolicy extends Base
      * @param  Category  $category
      * @return bool
      */
-    public function view($user, Category $category)
+    public function view($user, Category $category): bool
     {
         return $user->name == 'DemoAdmin';
     }
@@ -98,7 +98,7 @@ class CategoryPolicy extends Base
      * @param  Category  $category
      * @return bool
      */
-    public function delete($user, Category $category)
+    public function delete($user, Category $category): bool
     {
         return $user->name == 'DemoAdmin';
     }

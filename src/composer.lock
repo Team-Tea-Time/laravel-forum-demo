@@ -2645,16 +2645,16 @@
         },
         {
             "name": "riari/laravel-forum",
-            "version": "5.0.0-rc.2",
+            "version": "5.0.0-rc.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Team-Tea-Time/laravel-forum.git",
-                "reference": "1e344ee639a1e3544f7de7539e0502cd25c37c7f"
+                "reference": "ab40a799cd8da448bbdfc489a51b4babfffcfcad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Team-Tea-Time/laravel-forum/zipball/1e344ee639a1e3544f7de7539e0502cd25c37c7f",
-                "reference": "1e344ee639a1e3544f7de7539e0502cd25c37c7f",
+                "url": "https://api.github.com/repos/Team-Tea-Time/laravel-forum/zipball/ab40a799cd8da448bbdfc489a51b4babfffcfcad",
+                "reference": "ab40a799cd8da448bbdfc489a51b4babfffcfcad",
                 "shasum": ""
             },
             "require": {
@@ -2702,9 +2702,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Team-Tea-Time/laravel-forum/issues",
-                "source": "https://github.com/Team-Tea-Time/laravel-forum/tree/5.0.0-rc.2"
+                "source": "https://github.com/Team-Tea-Time/laravel-forum/tree/5.0.0-rc.3"
             },
-            "time": "2021-08-04T12:12:28+00:00"
+            "time": "2021-08-04T13:21:22+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
