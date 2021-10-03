@@ -2718,16 +2718,16 @@
         },
         {
             "name": "riari/laravel-forum",
-            "version": "5.0.9",
+            "version": "5.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Team-Tea-Time/laravel-forum.git",
-                "reference": "21ae40c5f2090b7581cbc749ebd9e69bad6c73df"
+                "reference": "84fd702573f460d3b92acbad0f4641f2f3fb9fa6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Team-Tea-Time/laravel-forum/zipball/21ae40c5f2090b7581cbc749ebd9e69bad6c73df",
-                "reference": "21ae40c5f2090b7581cbc749ebd9e69bad6c73df",
+                "url": "https://api.github.com/repos/Team-Tea-Time/laravel-forum/zipball/84fd702573f460d3b92acbad0f4641f2f3fb9fa6",
+                "reference": "84fd702573f460d3b92acbad0f4641f2f3fb9fa6",
                 "shasum": ""
             },
             "require": {
@@ -2777,9 +2777,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Team-Tea-Time/laravel-forum/issues",
-                "source": "https://github.com/Team-Tea-Time/laravel-forum/tree/5.0.9"
+                "source": "https://github.com/Team-Tea-Time/laravel-forum/tree/5.0.10"
             },
-            "time": "2021-10-03T12:01:02+00:00"
+            "time": "2021-10-03T20:13:25+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -5791,21 +5791,21 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.14.3",
+            "version": "2.14.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "89584ce67dd32307f1063cc43846674f4679feda"
+                "reference": "f056f1fe935d9ed86e698905a957334029899895"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/89584ce67dd32307f1063cc43846674f4679feda",
-                "reference": "89584ce67dd32307f1063cc43846674f4679feda",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/f056f1fe935d9ed86e698905a957334029899895",
+                "reference": "f056f1fe935d9ed86e698905a957334029899895",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.5.9 || ^7.0 || ^8.0",
-                "psr/log": "^1.0.1"
+                "psr/log": "^1.0.1 || ^2.0 || ^3.0"
             },
             "require-dev": {
                 "mockery/mockery": "^0.9 || ^1.0",
@@ -5850,7 +5850,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.14.3"
+                "source": "https://github.com/filp/whoops/tree/2.14.4"
             },
             "funding": [
                 {
@@ -5858,7 +5858,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-09-19T12:00:00+00:00"
+            "time": "2021-10-03T12:00:00+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
