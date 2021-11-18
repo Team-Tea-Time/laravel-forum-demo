@@ -18,6 +18,16 @@ class ThreadPolicy extends Base
         return $user->id === $thread->author_id || in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }
 
+    public function delete($user, Thread $thread): bool
+    {
+        return $user->id === $thread->author_id || in_array($user->name, ['DemoModerator', 'DemoAdmin']);
+    }
+
+    public function restore($user, Thread $thread): bool
+    {
+        return $user->id === $thread->author_id || in_array($user->name, ['DemoModerator', 'DemoAdmin']);
+    }
+
     public function reply($user, Thread $thread): bool
     {
         return !$thread->locked || in_array($user->name, ['DemoModerator', 'DemoAdmin']);
