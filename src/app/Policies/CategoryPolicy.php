@@ -9,7 +9,7 @@ class CategoryPolicy extends Base
 {
     public function deleteThreads($user, Category $category): bool
     {
-        return in_array($user->name, ['DemoModerator', 'DemoAdmin']);
+        return true;
     }
 
     public function enableThreads($user, Category $category): bool
