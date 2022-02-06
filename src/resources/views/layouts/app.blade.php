@@ -290,7 +290,7 @@
         {
             event.preventDefault();
 
-            openModal(findModal(event.target.dataset.openModal));
+            openModal(findModal(event.currentTarget.dataset.openModal));
         });
     });
 
@@ -298,22 +298,21 @@
     {
         modal.addEventListener('click', event =>
         {
-            if (event.target.hasAttribute('data-close-modal'))
+            if (! event.target.hasAttribute('data-close-modal')) return;
+
+            modal.classList.remove('show');
+            mask.classList.remove('show');
+            setTimeout(function()
             {
-                modal.classList.remove('show');
-                mask.classList.remove('show');
-                setTimeout(function()
-                {
-                    modal.style.display = 'none';
-                    mask.style.display = 'none';
-                }, 200);
-            }
+                modal.style.display = 'none';
+                mask.style.display = 'none';
+            }, 200);
         });
     });
 
     document.querySelectorAll('[data-dismiss]').forEach(item =>
     {
-        item.addEventListener('click', event => event.target.parentElement.style.display = 'none');
+        item.addEventListener('click', event => event.currentTarget.parentElement.style.display = 'none');
     });
 
     document.addEventListener('DOMContentLoaded', event =>
