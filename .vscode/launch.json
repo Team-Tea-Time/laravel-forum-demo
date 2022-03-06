@@ -11,7 +11,7 @@
             "pathMappings": {
                 "/var/www/laravel-forum-demo": "${workspaceFolder}/src"
             },
-            "port": 9001,
+            "port": 9003,
             "ignore": [
                 "**/vendor/**/*.php"
             ]

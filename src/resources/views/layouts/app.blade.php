@@ -236,7 +236,7 @@
     <div class="mask"></div>
 
 	<div class="text-center text-muted mb-3">
-		Running Laravel Forum 5 on Laravel 8.<br>
+		Running Laravel Forum 5.3 on Laravel 9.<br>
 		See <a href="https://github.com/Team-Tea-Time/laravel-forum-demo">demo source</a>, <a href="https://github.com/Team-Tea-Time/laravel-forum">package source</a>, and <a href="https://www.teamteatime.net/docs/laravel-forum/5/">docs</a>.<br>
 		Resets weekly on Sundays.
 	</div>

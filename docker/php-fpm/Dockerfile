@@ -1,4 +1,4 @@
-FROM php:7.4-fpm
+FROM php:8.1-fpm
 
 COPY src/composer.* /var/www/laravel-forum-demo/
 
@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y \
     libjpeg62-turbo-dev \
     libfreetype6-dev \
     libzip-dev \
+    libicu-dev \
     locales \
     zip \
     jpegoptim optipng pngquant gifsicle \
@@ -33,9 +34,12 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 # PHP extensions
 RUN docker-php-ext-install pdo_mysql zip exif pcntl
+RUN docker-php-ext-configure intl
+RUN docker-php-ext-install intl
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg
 RUN docker-php-ext-install gd
 RUN pecl install xdebug && docker-php-ext-enable xdebug
+RUN pecl install redis && docker-php-ext-enable redis
 
 # PHP config
 RUN mv $PHP_INI_DIR/php.ini-development $PHP_INI_DIR/php.ini
