@@ -2816,12 +2816,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Team-Tea-Time/laravel-forum.git",
-                "reference": "7491dac970ffdc65edaa56ea47869adfaed7dc0d"
+                "reference": "347acb61647b6b97ef4b9e46d2586b3311d923ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Team-Tea-Time/laravel-forum/zipball/7491dac970ffdc65edaa56ea47869adfaed7dc0d",
-                "reference": "7491dac970ffdc65edaa56ea47869adfaed7dc0d",
+                "url": "https://api.github.com/repos/Team-Tea-Time/laravel-forum/zipball/347acb61647b6b97ef4b9e46d2586b3311d923ca",
+                "reference": "347acb61647b6b97ef4b9e46d2586b3311d923ca",
                 "shasum": ""
             },
             "require": {
@@ -2875,7 +2875,7 @@
                 "issues": "https://github.com/Team-Tea-Time/laravel-forum/issues",
                 "source": "https://github.com/Team-Tea-Time/laravel-forum/tree/5.4.2"
             },
-            "time": "2022-11-27T19:18:11+00:00"
+            "time": "2022-11-27T19:24:50+00:00"
         },
         {
             "name": "symfony/console",
