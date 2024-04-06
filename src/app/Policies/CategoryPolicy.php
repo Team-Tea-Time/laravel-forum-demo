@@ -7,9 +7,14 @@ use TeamTeaTime\Forum\Policies\CategoryPolicy as Base;
 
 class CategoryPolicy extends Base
 {
+    public function edit($user, Category $category): bool
+    {
+        return in_array($user->name, ['DemoModerator', 'DemoAdmin']);
+    }
+
     public function deleteThreads($user, Category $category): bool
     {
-        return true;
+        return in_array($user->name, ['DemoModerator', 'DemoAdmin']);
     }
 
     public function enableThreads($user, Category $category): bool

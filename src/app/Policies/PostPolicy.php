@@ -2,7 +2,6 @@
 
 namespace App\Policies;
 
-use Illuminate\Support\Facades\Gate;
 use TeamTeaTime\Forum\Models\Post;
 use TeamTeaTime\Forum\Policies\PostPolicy as Base;
 

@@ -1,12 +1,24 @@
 {
-  "private": true,
-  "scripts": {
-    "prod": "gulp --production",
-    "dev": "gulp watch"
-  },
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "laravel-elixir": "^5.0.0",
-    "bootstrap-sass": "^3.3.0"
-  }
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.2",
+        "autoprefixer": "^10.4.2",
+        "axios": "^1.6.4",
+        "laravel-vite-plugin": "^1.0",
+        "postcss": "^8.4.31",
+        "tailwindcss": "^3.4.3",
+        "vite": "^5.0"
+    },
+    "dependencies": {
+        "@melloware/coloris": "^0.23.1",
+        "alpinejs": "^3.13.8",
+        "date-fns": "^3.6.0",
+        "laravel-echo": "^1.16.0",
+        "nested-sort": "^5.2.0"
+    }
 }

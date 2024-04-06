@@ -2,7 +2,6 @@
 
 namespace App\Policies;
 
-use Illuminate\Support\Facades\Gate;
 use TeamTeaTime\Forum\Models\Thread;
 use TeamTeaTime\Forum\Policies\ThreadPolicy as Base;
 

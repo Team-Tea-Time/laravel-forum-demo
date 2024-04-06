@@ -32,3 +32,5 @@ services:
     volumes:
       - ./src:/var/www/laravel-forum-demo
       - /var/www/laravel-forum-demo/vendor
+    ports:
+      - "8080:8080"
