@@ -74,11 +74,6 @@
                                         {{ __('Log in') }}
                                     </a>
                                 </span>
-                                <span class="w-full md:w-auto">
-                                    <a href="{{ url('/register') }}" class="block hover:bg-slate-100 dark:hover:bg-slate-600 rounded-md px-4 py-2 md:hover:bg-transparent md:dark:hover:bg-transparent md:inline">
-                                        {{ __('Register') }}
-                                    </a>
-                                </span>
                             @endif
                         </div>
                     </div>
