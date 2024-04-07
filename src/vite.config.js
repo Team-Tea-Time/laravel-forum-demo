@@ -7,6 +7,8 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
+                'resources/forum/livewire-tailwind/css/forum.css',
+                'resources/forum/livewire-tailwind/js/forum.js',
             ],
             refresh: true,
         }),
