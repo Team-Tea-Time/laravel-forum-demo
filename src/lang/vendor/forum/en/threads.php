@@ -1,0 +1,37 @@
+<?php
+
+return [
+
+    'actions' => 'Thread actions',
+    'created' => 'Thread created',
+    'confirm_perma_delete' => 'Are you sure you want to permanently delete this thread?|Are you sure you want to permanently delete these threads?',
+    'confirm_restore' => 'Are you sure you want to restore this thread?|Are you sure you want to restore these threads?',
+    'confirm_delete' => 'Are you sure you want to delete this thread?|Are you sure you want to delete these threads?',
+    'confirm_lock' => 'Are you sure you want to lock this thread?||Are you sure you want to lock these threads?',
+    'confirm_unlock' => 'Are you sure you want to unlock this thread?||Are you sure you want to unlock these threads?',
+    'confirm_pin' => 'Are you sure you want to pin this thread?||Are you sure you want to pin these threads?',
+    'confirm_unpin' => 'Are you sure you want to unpin this thread?||Are you sure you want to unpin these threads?',
+    'delete' => 'Delete this thread',
+    'deleted' => 'Thread deleted|Threads deleted',
+    'lock' => 'Lock',
+    'locked' => 'Locked',
+    'marked_read' => 'All threads have been marked as read',
+    'new_thread' => 'New thread',
+    'newest' => 'Newest thread',
+    'none_found' => 'No threads found',
+    'perma_delete' => 'Permanently delete thread|Permanently delete threads',
+    'perma_deleted' => 'Thread permanently deleted|Threads permanently deleted',
+    'pin' => 'Pin',
+    'pinned' => 'Pinned',
+    'post_the_first' => 'Post the first!',
+    'recent' => 'Recent threads',
+    'restored' => 'Thread restored|Threads restored',
+    'select_all' => 'Select all threads',
+    'thread' => 'Thread|Threads',
+    'updated' => 'Thread updated|Threads updated',
+    'unlock' => 'Unlock',
+    'unpin' => 'Unpin',
+    'unread_updated' => 'Unread & updated threads',
+    'view' => 'View thread',
+
+];
