@@ -32,12 +32,14 @@
         <div class="grow">
         </div>
         @if ($category->accepts_threads)
-            <div>
-                <x-forum::link-button
-                    :href="Forum::route('thread.create', $category)"
-                    icon="pencil-outline"
-                    :label="trans('forum::threads.new_thread')" />
-            </div>
+            @can ('createThreads')
+                <div>
+                    <x-forum::link-button
+                        :href="Forum::route('thread.create', $category)"
+                        icon="pencil-outline"
+                        :label="trans('forum::threads.new_thread')" />
+                </div>
+            @endcan
         @endif
     </div>
 
