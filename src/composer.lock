@@ -3536,16 +3536,16 @@
         },
         {
             "name": "riari/laravel-forum",
-            "version": "6.0.0-rc.9",
+            "version": "6.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Team-Tea-Time/laravel-forum.git",
-                "reference": "cca7f3fa5d19ea467e7e57af6d2bfc53ef1f7b2e"
+                "reference": "3de19a937efa125ed4fd008f7861f8f1856b13bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Team-Tea-Time/laravel-forum/zipball/cca7f3fa5d19ea467e7e57af6d2bfc53ef1f7b2e",
-                "reference": "cca7f3fa5d19ea467e7e57af6d2bfc53ef1f7b2e",
+                "url": "https://api.github.com/repos/Team-Tea-Time/laravel-forum/zipball/3de19a937efa125ed4fd008f7861f8f1856b13bb",
+                "reference": "3de19a937efa125ed4fd008f7861f8f1856b13bb",
                 "shasum": ""
             },
             "require": {
@@ -3597,9 +3597,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Team-Tea-Time/laravel-forum/issues",
-                "source": "https://github.com/Team-Tea-Time/laravel-forum/tree/6.0.0-rc.9"
+                "source": "https://github.com/Team-Tea-Time/laravel-forum/tree/6.0.1"
             },
-            "time": "2024-04-06T15:44:34+00:00"
+            "time": "2024-04-07T10:26:06+00:00"
         },
         {
             "name": "symfony/clock",
