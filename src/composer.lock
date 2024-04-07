@@ -1842,16 +1842,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.26.0",
+            "version": "3.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "072735c56cc0da00e10716dd90d5a7f7b40b36be"
+                "reference": "4729745b1ab737908c7d055148c9a6b3e959832f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/072735c56cc0da00e10716dd90d5a7f7b40b36be",
-                "reference": "072735c56cc0da00e10716dd90d5a7f7b40b36be",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/4729745b1ab737908c7d055148c9a6b3e959832f",
+                "reference": "4729745b1ab737908c7d055148c9a6b3e959832f",
                 "shasum": ""
             },
             "require": {
@@ -1916,7 +1916,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.26.0"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.27.0"
             },
             "funding": [
                 {
@@ -1928,7 +1928,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-25T11:49:53+00:00"
+            "time": "2024-04-07T19:17:50+00:00"
         },
         {
             "name": "league/flysystem-local",
@@ -3536,16 +3536,16 @@
         },
         {
             "name": "riari/laravel-forum",
-            "version": "6.0.2",
+            "version": "6.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Team-Tea-Time/laravel-forum.git",
-                "reference": "461fab4888c404453ea27d700a502eb8e3f366ef"
+                "reference": "35aee41976bc74169cb3aedbcca572b1e868050d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Team-Tea-Time/laravel-forum/zipball/461fab4888c404453ea27d700a502eb8e3f366ef",
-                "reference": "461fab4888c404453ea27d700a502eb8e3f366ef",
+                "url": "https://api.github.com/repos/Team-Tea-Time/laravel-forum/zipball/35aee41976bc74169cb3aedbcca572b1e868050d",
+                "reference": "35aee41976bc74169cb3aedbcca572b1e868050d",
                 "shasum": ""
             },
             "require": {
@@ -3597,9 +3597,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Team-Tea-Time/laravel-forum/issues",
-                "source": "https://github.com/Team-Tea-Time/laravel-forum/tree/6.0.2"
+                "source": "https://github.com/Team-Tea-Time/laravel-forum/tree/6.0.3"
             },
-            "time": "2024-04-07T11:16:56+00:00"
+            "time": "2024-04-07T21:56:37+00:00"
         },
         {
             "name": "symfony/clock",
