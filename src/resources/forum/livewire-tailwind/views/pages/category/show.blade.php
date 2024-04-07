@@ -32,7 +32,7 @@
         <div class="grow">
         </div>
         @if ($category->accepts_threads)
-            @can ('createThreads')
+            @can ('createThreads', $category)
                 <div>
                     <x-forum::link-button
                         :href="Forum::route('thread.create', $category)"
