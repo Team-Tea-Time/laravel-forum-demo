@@ -1,5 +1,5 @@
 <time x-data="timestamp"
-    x-effect="setNaturalDiff(new Date('{{ $carbon }}'), $store.time.now)"
+    x-effect="setNaturalDiff(Date.parse('{{ $carbon->toIso8601String() }}'), $store.time.now)"
     class="timestamp"
     datetime="{{ $carbon }}"
     title="{{ $carbon->toDayDateTimeString() }}">
