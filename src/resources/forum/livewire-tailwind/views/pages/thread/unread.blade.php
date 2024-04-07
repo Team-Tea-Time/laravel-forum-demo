@@ -31,7 +31,7 @@
         :heading="trans('forum::general.mark_read')"
         x-show="showMarkAsReadModal"
         onClose="showMarkAsReadModal = false">
-        {{ trans('forum::general.confirm_mark_all_read') }}
+        {{ trans('forum::general.generic_confirm') }}
 
         <div class="flex flex-wrap mt-6">
             <div class="grow">
