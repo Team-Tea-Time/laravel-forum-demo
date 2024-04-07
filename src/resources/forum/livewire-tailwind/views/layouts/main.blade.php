@@ -129,7 +129,7 @@
                             headers: {
                                 'X-CSRF-TOKEN': csrfToken
                             }
-                        }).then(() => { window.location.reload(); });
+                        }).then(() => { window.location.href = '/'; });
                     }
                 }
             });
