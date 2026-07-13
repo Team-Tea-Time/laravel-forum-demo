@@ -86,7 +86,7 @@
         </div>
 
         <div class="my-4 text-center">
-            Running Laravel Forum 6 on Laravel 11.<br>
+            Running Laravel Forum 8 on Laravel 13.<br>
             Resets every weekend.<br>
             See <a href="https://www.teamteatime.net/docs/laravel-forum/6.x/general/">docs</a> and <a href="https://github.com/Team-Tea-Time/laravel-forum">source</a>.
         </div>
