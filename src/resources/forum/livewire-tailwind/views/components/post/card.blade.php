@@ -14,7 +14,7 @@
         @endif
         <div class="grow p-6 w-full sm:w-4/5">
             @if (isset($post->parent))
-                <livewire:forum::components.post.quote :post="$post->parent" />
+                <livewire:forum.components.post.quote :post="$post->parent" />
             @endif
 
             <div class="dark:text-slate-100">
@@ -26,7 +26,7 @@
                     @endcan
 
                     <div>
-                        <livewire:forum::components.pill
+                        <livewire:forum.components.pill
                             bg-color="bg-zinc-400"
                             text-color="text-zinc-950"
                             margin="mr-2"
@@ -40,10 +40,10 @@
 
             <div class="flex flex-col sm:flex-row mt-4">
                 <div class="grow text-slate-500">
-                    <livewire:forum::components.timestamp :carbon="$post->created_at" />
+                    <livewire:forum.components.timestamp :carbon="$post->created_at" />
                     @if ($post->hasBeenUpdated())
                         <span class="mx-1 text-slate-500">•</span>
-                        {{ trans('forum::general.last_updated') }} <livewire:forum::components.timestamp :carbon="$post->updated_at" />
+                        {{ trans('forum::general.last_updated') }} <livewire:forum.components.timestamp :carbon="$post->updated_at" />
                     @endif
                 </div>
                 @if (!isset($single) || !$single)

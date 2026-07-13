@@ -91,7 +91,7 @@
             See <a href="https://www.teamteatime.net/docs/laravel-forum/6.x/general/">docs</a> and <a href="https://github.com/Team-Tea-Time/laravel-forum">source</a>.
         </div>
 
-        <livewire:forum::components.alerts />
+        <livewire:forum.components.alerts />
 
         <script type="module">
             document.addEventListener('alpine:init', () => {
