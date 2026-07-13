@@ -20,13 +20,13 @@
                         wire:model="description" />
 
                     <x-forum::form.input-text
-                        id="color"
+                        id="color-light-mode"
                         :label="trans('forum::general.color_light_mode')"
                         wire:model="color_light_mode"
                         data-coloris />
 
                     <x-forum::form.input-text
-                        id="color"
+                        id="color-dark-mode"
                         :label="trans('forum::general.color_dark_mode')"
                         wire:model="color_dark_mode"
                         data-coloris />
@@ -50,6 +50,20 @@
                         id="make-private"
                         :label="trans('forum::categories.make_private')"
                         wire:model="is_private" />
+
+                    @if (!config('forum.general.content_approval.threads.enable_globally'))
+                        <x-forum::form.input-checkbox
+                            id="thread-approval-enabled"
+                            :label="trans('forum::categories.enable_thread_approval')"
+                            wire:model="thread_approval_enabled" />
+                    @endif
+
+                    @if (!config('forum.general.content_approval.posts.enable_globally'))
+                        <x-forum::form.input-checkbox
+                            id="post-approval-enabled"
+                            :label="trans('forum::categories.enable_post_approval')"
+                            wire:model="post_approval_enabled" />
+                    @endif
 
                     <div class="flex mt-4">
                         <div class="grow">
